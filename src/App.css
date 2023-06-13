@@ -1,38 +1,374 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Rest of your CSS rules */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Prevent horizontal overflow */
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+  /* Remove duplicated height property */
+  min-height: 100vh; /* Ensure a minimum height of viewport */
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;;
+  width: 100%;
+  background-image:url(/src/Images/shield-marvel-comic-captain-america-wallpaper-preview.jpg);
+  z-index: 9999;
+}
+
+.search-bar{
+ display: flex;
+ flex-direction: row;
+ margin-right: 2em;
+ color: #f0f0f0;
+
+}
+
+
+.logo img {
+  width: 200px;
+  height:70px; /* Adjust the width to your desired size */
+ /* Maintain the aspect ratio */
+}
+
+
+
+.nav-items ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+}
+
+.nav-links {
+  list-style-type: none;
+  
+}
+
+.link-style {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1em;
+  font-weight: 3em;
+}
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+#bgd{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+}
+
+.card-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2em auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  overflow: hidden;
+  height: 100%;
+}
+
+#img {
+  width: 350px;
+  height: 320px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+#linkDone{
+  text-decoration: none;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration-line: none;
+  color: #fff;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 200px;
+  color: #fff;
+}
+
+
+#shittty{
+  text-decoration-line: none;
+  font-weight: 100em;
+  color: blue;
+}
+
+#characters-img{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+}
+
+.link-style:active {
+  border-top: red;
+  color: red;
+  border-bottom: red; /* Apply red color to the link when it is clicked */
+}
+
+
+
+
+
+.character-details{
+
+  display: flex;
+  flex-direction: row;
   color: white;
+  width: 100%;
+  height: 100%;
+  gap:20px;
+  align-items: center;
+  background-image: url(./Images/stars-1837306.jpg);  
+ }
+ 
+ 
+ .character-details img{
+ 
+  
+  max-width: 20em;
+ 
+ }
+ 
+
+
+.comics-details{
+
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 100%;
+  height: 100%;
+  gap:20px;
+  align-items: center;
+  background-image: url(./Images/stars-1837306.jpg);  
+ }
+ 
+ 
+ .comics-details img{
+ 
+  
+  max-width: 20em;
+ 
+ }
+
+
+
+
+ 
+
+
+
+
+ 
+ .search-container {
+  text-align: left;
+  margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.Details {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  align-items: center;
+  background-image: url(./Images/stars-1837306.jpg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.related{
+  color: #f0f0f0;
+}
+
+.card-details-1 img {
+  max-width: 20em;
+}
+
+.card-details-2{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  
+}
+
+.card-details-2 p{
+  color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen  and (max-width: 900px) {
+
+  
+  .link-style {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: .75em;
+    font-weight: 2em;
+    gap:5px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+
+@media screen  and (max-width: 800px) {
+
+  .navbar{
+    flex-direction: column;
+    height: 110px;
+
   }
+  
+  .card-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .link-style {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: .75em;
+    font-weight: 2em;
+  }
+
+  .search-container {
+    text-align: center;
+  }
+
+
+}
+
+
+
+@media screen  and (max-width: 530px) {
+
+  .navbar{
+    flex-direction: column;
+    height: 110px;
+  }
+  .card-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .link-style {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: .75em;
+    font-weight: 2em;
+  }
+
+  .search-container {
+    text-align: center;
+  }
+
+
+}
+
+@media screen  and (max-width: 450px) {
+
+  .navbar{
+    flex-direction: column;
+  }
+  .card-container{
+    grid-template-columns: 200px;
+  }
+
+  .link-style {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: .75em;
+    font-weight: 2em;
+  }
+
+  .search-container {
+    text-align: center;
+  }
+
+
 }
